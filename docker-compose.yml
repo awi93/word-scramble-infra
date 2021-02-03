@@ -1,0 +1,9 @@
+version: "3.3"
+
+services:
+  apiserver:
+    build: api_server
+    environment: 
+      WEB_DOCUMENT_ROOT: "/app/public"
+    expose:
+      - "80"
