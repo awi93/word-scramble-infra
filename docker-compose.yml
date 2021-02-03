@@ -5,5 +5,11 @@ services:
     build: api_server
     environment: 
       WEB_DOCUMENT_ROOT: "/app/public"
-    expose:
-      - "80"
+      DB_HOST: "128.199.217.247"
+    restart: always
+    ports:
+      - "80:80"
+      - "443:443"
+
+volumes:
+  mydata:
