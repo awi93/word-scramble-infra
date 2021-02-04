@@ -4,13 +4,13 @@ COPY cron/scramble /opt/docker/etc/cron/root
 
 RUN apt-get update && apt-get install -y unzip
 
-RUN curl https://codeload.github.com/awi93/word-scramble-api/zip/v1.0.22 --output app.zip
+RUN curl https://codeload.github.com/awi93/word-scramble-api/zip/v1.0.23 --output app.zip
 
 RUN echo "A" | unzip app.zip -d app
 
-RUN mv /app/word-scramble-api-1.0.22/.[!.]* /app
-RUN mv /app/word-scramble-api-1.0.22/* /app
-RUN rm -r /app/word-scramble-api-1.0.22
+RUN mv /app/word-scramble-api-1.0.23/.[!.]* /app
+RUN mv /app/word-scramble-api-1.0.23/* /app
+RUN rm -r /app/word-scramble-api-1.0.23
 
 RUN rm app.zip
 
