@@ -2,10 +2,15 @@ version: "3.3"
 
 services:
   apiserver:
-    build: api_server
-    environment: 
+    image: andywie88/word-scramble-api:1.0.34
+    environment:
       WEB_DOCUMENT_ROOT: "/app/public"
+      DB_CONNECTION: "pgsql"
       DB_HOST: "128.199.217.247"
+      DB_PORT: "5432"
+      DB_DATABASE: "word_scramble"
+      DB_USERNAME: "postgres"
+      DB_PASSWORD: "postgres"
     restart: always
     ports:
       - "80:80"
